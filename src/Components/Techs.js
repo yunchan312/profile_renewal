@@ -59,7 +59,7 @@ export default function Techs() {
           <div
             className={`${
               isClicked == 1 ? null : "hidden"
-            } border-2 w-full h-full`}
+            } border-2 w-full h-full `}
           >
             <div className="flex items-center gap-2">
               <SiNextdotjs className="text-5xl" />
