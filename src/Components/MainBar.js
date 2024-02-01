@@ -7,11 +7,11 @@ import { FaSchool } from "react-icons/fa";
 
 export default function MainBar() {
   return (
-    <div className="bg-slate-400 w-full min-h-[98vh] sm:px-20 p-5 mt-20 ">
+    <div className="bg-slate-400 w-full min-h-[91vh] sm:px-20 p-5 sm:mt-20 mt-10 ">
       <div className="sm:text-2xl text-lg pb-3 border-b-2 text-white">
         Front-end Developer
       </div>
-      <div className="grid lg:grid-cols-2 grid-cols-1 sm:py-20 py-10 gap-10">
+      <div className="grid lg:grid-cols-2 grid-cols-1 sm:pt-20 pt-10 gap-10">
         <div className="flex sm:px-20 items-start justify-center flex-col gap-5 ">
           <div className="flex flex-col w-full">
             <img src={photo} alt="me" className="md:w-2/3 w-full rounded" />
