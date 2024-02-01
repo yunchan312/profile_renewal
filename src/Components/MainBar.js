@@ -7,25 +7,23 @@ import { FaSchool } from "react-icons/fa";
 
 export default function MainBar() {
   return (
-    <div className="bg-slate-400 w-full h-[98vh] px-40 p-5 mt-20">
-      <div className="text-2xl pb-3 border-b-2 text-white">
+    <div className="bg-slate-400 w-full min-h-[98vh] sm:px-20 p-5 mt-20 ">
+      <div className="sm:text-2xl text-lg pb-3 border-b-2 text-white">
         Front-end Developer
       </div>
-      <div className="flex justify-between p-20 ">
-        <div className="flex items-start flex-col">
-          <div className="flex flex-col">
-            <img src={photo} alt="me" className="w-96 rounded" />
+      <div className="grid lg:grid-cols-2 grid-cols-1 sm:py-20 py-10 gap-10">
+        <div className="flex sm:px-20 items-start justify-center flex-col gap-5 ">
+          <div className="flex flex-col w-full">
+            <img src={photo} alt="me" className="md:w-2/3 w-full rounded" />
           </div>
-
-          <div className="flex flex-col justify-center w-1/3">
-            <div className="text-9xl font-bold text-white">
-              Koo
-              <br />
-              YunChann
-            </div>
+          <div className="lg:text-8xl sm:text-6xl text-5xl w-full font-bold flex flex-col text-white justify-start items-start">
+            Koo
+            <br />
+            YunChann
           </div>
         </div>
-        <div className=" w-1/2 flex flex-col items-center justify-around">
+
+        <div className="w-full sm:px-20 flex flex-col items-center justify-around gap-7">
           <Card
             Icon={<IoLogoGithub />}
             title={"Github"}
