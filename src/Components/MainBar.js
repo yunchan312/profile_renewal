@@ -1,50 +1,20 @@
-import Card from "./Card";
 import photo from "../Assets/me.jpg";
-import { IoLogoGithub } from "react-icons/io5";
-import { FaInstagram } from "react-icons/fa";
-import { MdOutlineEmail } from "react-icons/md";
-import { FaSchool } from "react-icons/fa";
 
 export default function MainBar() {
   return (
-    <div className="bg-slate-400 w-full min-h-[91vh] sm:px-20 p-5 sm:mt-20 mt-10 ">
-      <div className="sm:text-2xl text-lg pb-3 border-b-2 text-white">
-        Front-end Developer
+    <div className="bg-slate-400 w-full min-h-[91vh] px-10 sm:mt-20 mt-10 ">
+      {/*<div className="flex flex-col w-full">
+            <img src={photo} alt="me" className="md:w-2/3 w-full rounded" /> 
+          </div>*/}
+      <div className="md:text-[12vw] text-[10vw] text-center text-white font-bold">
+        KOOYUNCHANN
       </div>
-      <div className="grid lg:grid-cols-2 grid-cols-1 sm:pt-20 pt-10 gap-10">
-        <div className="flex sm:px-20 items-start justify-center flex-col gap-5 ">
-          <div className="flex flex-col w-full">
-            <img src={photo} alt="me" className="md:w-2/3 w-full rounded" />
-          </div>
-          <div className="lg:text-8xl sm:text-6xl text-5xl w-full font-bold flex flex-col text-white justify-start items-start">
-            Koo
-            <br />
-            YunChann
-          </div>
-        </div>
-
-        <div className="w-full sm:px-20 flex flex-col items-center justify-around gap-7">
-          <Card
-            Icon={<IoLogoGithub />}
-            title={"Github"}
-            content={"yunchan312"}
-          />
-          <Card
-            Icon={<FaInstagram />}
-            title={"Instagram"}
-            content={"@9uccichann"}
-          />
-          <Card
-            Icon={<MdOutlineEmail />}
-            title={"Email"}
-            content={"phenomena312@naver.com"}
-          />
-          <Card
-            Icon={<FaSchool />}
-            title={"University"}
-            content={"Hankuk Universiy of Foreign Studies"}
-          />
-        </div>
+      <div className="text-[3vw] py-3 border-y-8 text-white flex justify-between font-bold">
+        <div>FRONT-END DEVELOPER</div>
+        <div>#CREATIVE #PASSIONATE</div>
+      </div>
+      <div className="text-[8vw] text-white font-bold">
+        DO MY BEST TO BE A PHENOMENAL DEVELOPER
       </div>
     </div>
   );
