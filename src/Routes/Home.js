@@ -1,6 +1,6 @@
+import Info from "../Components/Info";
 import MainBar from "../Components/MainBar";
 import Projects from "../Components/Projects";
-import Study from "../Components/Study";
 import Techs from "../Components/Techs";
 
 export default function Home() {
@@ -8,6 +8,7 @@ export default function Home() {
     <div>
       <MainBar />
       <Techs />
+      <Info />
     </div>
   );
 }
