@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   SiTypescript,
   SiReact,
@@ -15,15 +15,35 @@ import {
 } from "react-icons/si";
 import TechSlider from "../Components/TechSlider";
 import ColoredTechSlider from "../Components/ColoredTechSlider";
+import { motion, useAnimation } from "framer-motion";
 
 export default function Techs() {
+  const controls = useAnimation();
   const [isClicked, setIsClicked] = useState(1);
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    const opacityValue = scrollY / 500;
+    controls.start({ opacity: opacityValue });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const onClick = (num) => {
     setIsClicked(num);
   };
   return (
     <div className="w-full h-[100vh] overflow-hidden">
-      <div className="flex flex-col justify-center items-center font-bold z-40 w-full backdrop-blur-xl bg-opacity-40 sm:py-10 h-full absolute px-10 md:h-[100vh]">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={controls}
+        transition={{ duration: 0.5 }}
+        className="flex flex-col justify-center items-center font-bold z-40 w-full backdrop-blur-xl bg-opacity-40 sm:py-10 h-full absolute px-10 md:h-[100vh] origin-[0%] opacity-[var("
+      >
         <div className="w-[90%] flex items-center justify-center lg:text-[8vw] text-[14vw] text-slate-400">
           <span>#TECHNICS</span>
         </div>
@@ -141,7 +161,7 @@ export default function Techs() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       <TechSlider />
       <ColoredTechSlider />
       <TechSlider />

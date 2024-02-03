@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Btn({ key, name }) {
+export default function Btn({ key, name, content }) {
   const [isEven, setIsEven] = useState(key % 2);
   return (
     <div className="bg-white">
@@ -27,6 +27,7 @@ export default function Btn({ key, name }) {
           </div>
         )}
       </div>
+      <div className="px-10">{content}</div>
     </div>
   );
 }
