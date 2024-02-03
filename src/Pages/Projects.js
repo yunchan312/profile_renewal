@@ -13,22 +13,16 @@ import {
 export default function Projects() {
   return (
     <div className="min-h-[100vh] w-full flex flex-col p-10 gap-5 bg-slate-400">
-      <div className="text-[5vw] text-center pb-3 border-b-8 border-white mb-10 text-white font-bold">
-        #PROJECTS
+      <div className="w-full text-white font-bold text-[7vw]">#PROJECTS</div>
+      <div className="text-[3vw] w-full py-3 border-y-8 text-white flex justify-between font-bold">
+        <div> AS FRONT-END DEVELOPER</div>
+        <div>#CREATIVE #PASSIONATE</div>
       </div>
-      <div>
-        <Btn />
-        <div className="text-xl grid grid-cols-2 gap-5">
-          <div>profile</div>
-          <div>Netflix_Cloning</div>
-          <div>CoupangPlay_Cloning</div>
-          <div>Number_Game_TS</div>
-          <div>CarrotMarket_Cloning</div>
-          <div>Coins</div>
-          <div>Study_Flex</div>
-          <div>Stop_Smoke</div>
-        </div>
-      </div>
+      <Btn key={0} name={"PROFILE"} />
+      <Btn key={1} name={"COINS"} />
+      <Btn key={2} name={"STUDY FLEX"} />
+      <Btn key={3} name={"CLONINGS"} />
+      <Btn key={4} name={"NO MORE SMOKE"} />
     </div>
   );
 }
