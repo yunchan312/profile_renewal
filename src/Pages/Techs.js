@@ -22,10 +22,8 @@ export default function Techs() {
     setIsClicked(num);
   };
   return (
-    <div className="w-full min-h-[100vh] ">
-      <TechSlider />
-      <ColoredTechSlider />
-      <div className="flex flex-col justify-center items-center font-bold z-40 w-full backdrop-blur-xl bg-opacity-40 py-10 h-full absolute">
+    <div className="w-full h-[100vh] overflow-hidden">
+      <div className="flex flex-col justify-center items-center font-bold z-40 w-full backdrop-blur-xl bg-opacity-40 sm:py-10 h-full absolute px-10 md:h-[100vh]">
         <div className="w-[90%] flex items-center justify-center lg:text-[8vw] text-[14vw] text-slate-400">
           <span>#TECHNICS</span>
         </div>
@@ -65,7 +63,7 @@ export default function Techs() {
             </div>
           </div>
 
-          <div className="w-full">
+          <div className="w-full mb-10">
             <div
               className={`${
                 isClicked === 1 ? null : "hidden"
