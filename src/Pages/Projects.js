@@ -19,10 +19,10 @@ export default function Projects() {
         <div>#CREATIVE #PASSIONATE</div>
       </div>
       <Btn key={0} name={"PROFILE"} content={"My Profile Page"} />
-      <Btn key={1} name={"COINS"} />
+      {/*<Btn key={1} name={"COINS"} />
       <Btn key={2} name={"STUDY FLEX"} />
       <Btn key={3} name={"CLONINGS"} />
-      <Btn key={4} name={"STOP SMOKE"} />
+      <Btn key={4} name={"STOP SMOKE"} />*/}
     </div>
   );
 }

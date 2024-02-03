@@ -36,6 +36,10 @@ module.exports = {
           "80%": { opacity: 0 },
           "100%": { opacity: 100 },
         },
+        slideDown: {
+          "0%": { transform: "translateY(0%)" },
+          "100%": { transform: "translateY(100%)" },
+        },
       },
       animation: {
         slider: "slider 10s linear infinite",
@@ -44,6 +48,7 @@ module.exports = {
         arrowFirst: "arrowFirst 1s linear infinite",
         arrowSecond: "arrowSecond 1s linear infinite",
         arrowThird: "arrowThird 1s linear infinite",
+        slideDown: "slideDown 1s linear",
       },
     },
   },

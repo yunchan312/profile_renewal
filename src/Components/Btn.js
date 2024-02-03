@@ -1,33 +1,37 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Btn({ key, name, content }) {
-  const [isEven, setIsEven] = useState(key % 2);
+  const [isBoxVisible, setIsBoxVisible] = useState(false);
+
+  const handleBoxClick = () => {
+    setIsBoxVisible((prev) => !prev);
+  };
+
   return (
-    <div className="bg-white">
-      <div className="px-10">
-        {isEven !== 0 ? (
+    <div>
+      <div onClick={handleBoxClick} className="bg-white py-10">
+        <div className="px-10">
           <div className="text-slate-400 font-bold text-[10vw] flex justify-between items-center">
-            <span>
-              {name} {key}
-            </span>
-            <span>
-              <span className="animate-arrowFirst">{">"}</span>
+            <span>{name}</span>
+            <span className="rotate-90">
               <span className="animate-arrowSecond">{">"}</span>
               <span className="animate-arrowThird">{">"}</span>
             </span>
           </div>
-        ) : (
-          <div className="text-slate-400 font-bold text-[10vw] flex justify-between items-center">
-            <span>
-              <span className="animate-arrowFirst">{"<"}</span>
-              <span className="animate-arrowSecond">{"<"}</span>
-              <span className="animate-arrowThird">{"<"}</span>
+        </div>
+        <div className="w-full flex items-center justify-center relative">
+          <div
+            className={`bg-slate-400 w-[95%] h-[400px] py-20 ${
+              isBoxVisible ? "animate-slideDown" : null
+            }`}
+          >
+            <span className="text-white font-bold text-[10vw] flex justify-between items-center">
+              {name}
             </span>
-            <span>{name}</span>
           </div>
-        )}
+        </div>
       </div>
-      <div className="px-10">{content}</div>
     </div>
   );
 }
