@@ -1,12 +1,12 @@
-import Card from "./Card";
+import Card from "../Components/Card";
 import { IoLogoGithub } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaSchool } from "react-icons/fa";
 import { SiNotion } from "react-icons/si";
-import TextSlider from "./TextSlider";
+import TextSlider from "../Components/TextSlider";
 import { Link } from "react-router-dom";
-import CustomModal from "./Modal";
+import CustomModal from "../Components/Modal";
 import { useRecoilState } from "recoil";
 import { ModalContents, ModalState } from "../atom";
 import { ClimbingBoxLoader } from "react-spinners";

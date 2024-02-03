@@ -13,6 +13,7 @@ import {
   SiPostman,
   SiCloudflare,
 } from "react-icons/si";
+import TechSlider from "../Components/TechSlider";
 
 export default function Techs() {
   const [isClicked, setIsClicked] = useState(0);
@@ -24,17 +25,15 @@ export default function Techs() {
     }
   };
   return (
-    <div className="w-full min-h-[90vh] px-10 p-5 ">
-      <div className="text-[3vw] py-3 border-b-8 border-t-8 border-slate-400 mb-10 text-slate-400 font-bold">
-        #Technics
-      </div>
-      <div className="flex gap-2">
-        <div className="flex flex-col justify-center items-center gap-5 h-full w-1/3">
+    <div className="w-full min-h-[90vh] p-5 ">
+      <TechSlider />
+      <div className="flex flex-col w-full items-center gap-2">
+        <div className="flex justify-center items-center gap-10 h-full w-1/3">
           <div
             onClick={() => onClick(1)}
             className={`${
               isClicked === 1 ? `animate-bounce` : null
-            } border-b-slate-400 border-l-slate-400 border-8 w-28 h-28 text-center font-bold rounded-full flex justify-center items-center hover:cursor-pointer hover:shadow-lg`}
+            } border-b-slate-400  border-8 w-28 h-28 text-center font-bold rounded-full flex justify-center items-center hover:cursor-pointer hover:shadow-lg`}
           >
             Frameworks
           </div>
@@ -50,7 +49,7 @@ export default function Techs() {
             onClick={() => onClick(3)}
             className={`${
               isClicked === 3 ? `animate-bounce` : null
-            } border-b-slate-400 border-l-slate-400 border-8 w-28 h-28 text-center font-bold rounded-full flex justify-center items-center hover:cursor-pointer hover:shadow-lg`}
+            } border-b-slate-400 border-l-slate-400 border-t-slate-400 border-8 w-28 h-28 text-center font-bold rounded-full flex justify-center items-center hover:cursor-pointer hover:shadow-lg`}
           >
             styles
           </div>
@@ -58,20 +57,13 @@ export default function Techs() {
             onClick={() => onClick(4)}
             className={`${
               isClicked === 4 ? `animate-bounce` : null
-            } border-b-slate-400 border-l-slate-400 border-8 w-28 h-28 text-center font-bold rounded-full flex justify-center items-center hover:cursor-pointer hover:shadow-lg`}
+            } border-slate-400 border-8 w-28 h-28 text-center font-bold rounded-full flex justify-center items-center hover:cursor-pointer hover:shadow-lg`}
           >
             ets
           </div>
         </div>
 
         <div className="w-full">
-          <div
-            className={`${
-              isClicked === 0 ? null : "hidden"
-            } text-slate-400 font-bold text-[9vw] text-center animate-pulse`}
-          >
-            ⇐ CLICK BUTTON
-          </div>
           <div
             className={`${
               isClicked === 1 ? null : "hidden"

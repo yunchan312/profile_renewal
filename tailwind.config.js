@@ -13,13 +13,19 @@ module.exports = {
     },
     extend: {
       keyframes: {
+        techSlider: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
         slider: {
           "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(-100%)" },
         },
       },
       animation: {
-        slider: "slider 4s linear infinite",
+        slider: "slider 10s linear infinite",
+        techSlider: "techSlider 10s linear infinite",
+        textSlider: "slider 40s linear infinite",
       },
     },
   },
