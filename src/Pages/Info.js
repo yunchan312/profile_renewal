@@ -17,10 +17,12 @@ export default function Info() {
   return (
     <div className="bg-slate-400 py-10 px-10 min-h-[90vh]">
       {isModal ? <CustomModal /> : null}
-      <div className=" text-slate-400 font-bold md:text-[7vw] text-[10vw] px-10 flex bg-white justify-between">
-        <div>ABOUT</div>
-        <div>{`>>`}</div>
-      </div>
+      {
+        <div className=" text-slate-400 font-bold md:text-[7vw] text-[10vw] px-10 flex bg-white justify-between">
+          <div>ABOUT</div>
+          <div>{`>>`}</div>
+        </div>
+      }
       <TextSlider />
       <div className="w-full grid lg:grid-cols-2 grid-cols-1 items-center justify-around gap-7 text-slate-400">
         <Link to="https://github.com/yunchan312">
