@@ -7,12 +7,12 @@ import { SiNotion } from "react-icons/si";
 import TextSlider from "../Components/TextSlider";
 import { Link } from "react-router-dom";
 import CustomModal from "../Components/Modal";
-import { useRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
 import { ModalState } from "../atom";
 import { ClimbingBoxLoader } from "react-spinners";
 
 export default function Info() {
-  const [isModal, setIsModal] = useRecoilState(ModalState);
+  const isModal = useRecoilValue(ModalState);
 
   return (
     <div className="bg-slate-400 py-10 px-10 min-h-[90vh]">

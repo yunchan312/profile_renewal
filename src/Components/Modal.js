@@ -1,8 +1,8 @@
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useSetRecoilState, useRecoilValue } from "recoil";
 import { ModalContents, ModalState } from "../atom";
 
 export default function CustomModal() {
-  const [isModal, setIsModal] = useRecoilState(ModalState);
+  const setIsModal = useSetRecoilState(ModalState);
   const modalContent = useRecoilValue(ModalContents);
 
   return (

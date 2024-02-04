@@ -1,9 +1,9 @@
-import { useRecoilState } from "recoil";
+import { useSetRecoilState } from "recoil";
 import { ModalContents, ModalState } from "../atom";
 
 export default function Card({ Icon, title, content, detail }) {
-  const [isModal, setIsModal] = useRecoilState(ModalState);
-  const [modalContet, setIsModalContent] = useRecoilState(ModalContents);
+  const setIsModal = useSetRecoilState(ModalState);
+  const setIsModalContent = useSetRecoilState(ModalContents);
 
   return (
     <div
