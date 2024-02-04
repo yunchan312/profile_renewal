@@ -1,14 +1,4 @@
 import Btn from "../Components/Btn";
-import {
-  Typescript,
-  ReactIcon,
-  IconStyledcomponents,
-  IconReactquery,
-  IconFramer,
-  IconTailwind,
-  IconNextjs,
-  Javascript,
-} from "../Assets/Icons";
 
 export default function Projects() {
   return (

@@ -1,4 +1,3 @@
-import Modal from "react-modal";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { ModalContents, ModalState } from "../atom";
 

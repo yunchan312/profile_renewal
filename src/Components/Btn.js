@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import { motion, useAnimation, Variants } from "framer-motion";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 export default function Btn({ context, name, content, github, img }) {

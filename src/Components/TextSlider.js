@@ -1,5 +1,3 @@
-import { useEffect, useRef, useState } from "react";
-
 export default function TextSlider() {
   const Arr = ["ABOUT", "ME ", "ABOUT", "ME ", "ABOUT", "ME ", "ABOUT", "ME "];
 

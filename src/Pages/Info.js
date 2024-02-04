@@ -8,7 +8,7 @@ import TextSlider from "../Components/TextSlider";
 import { Link } from "react-router-dom";
 import CustomModal from "../Components/Modal";
 import { useRecoilState } from "recoil";
-import { ModalContents, ModalState } from "../atom";
+import { ModalState } from "../atom";
 import { ClimbingBoxLoader } from "react-spinners";
 
 export default function Info() {

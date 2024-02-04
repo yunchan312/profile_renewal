@@ -1,5 +1,3 @@
-import photo from "../Assets/me.jpg";
-
 export default function MainBar() {
   return (
     <div className="bg-slate-400 w-full min-h-[91vh] px-10 sm:mt-20 mt-10 flex flex-col justify-center items-center ">

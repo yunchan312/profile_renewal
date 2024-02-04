@@ -1,4 +1,4 @@
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilState } from "recoil";
 import { ModalContents, ModalState } from "../atom";
 
 export default function Card({ Icon, title, content, detail }) {
