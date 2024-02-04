@@ -31,7 +31,7 @@ export default function Techs() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [controls]);
 
   const onClick = (num) => {
     setIsClicked(num);
