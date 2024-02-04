@@ -20,13 +20,13 @@ import { motion, useAnimation } from "framer-motion";
 export default function Techs() {
   const controls = useAnimation();
   const [isClicked, setIsClicked] = useState(1);
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
-    const opacityValue = scrollY / 500;
-    controls.start({ opacity: opacityValue });
-  };
 
   useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const opacityValue = scrollY / 500;
+      controls.start({ opacity: opacityValue });
+    };
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);

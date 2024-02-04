@@ -49,13 +49,17 @@ export default function TechSlider() {
       <div className="py-3 max-h-[25vh]">
         <div className="lg:text-[8vw] text-[16vw] font-bold flex flex-row-reverse flex-nowrap overflow-hidden">
           <div className="flex flex-nowrap animate-techSlider">
-            {techList.map((text) => (
-              <div className="mr-5">{text}</div>
+            {techList.map((text, i) => (
+              <div key={i} className="mr-5">
+                {text}
+              </div>
             ))}
           </div>
           <div className="flex flex-nowrap animate-techSlider">
-            {techList.map((text) => (
-              <div className="mr-5">{text}</div>
+            {techList.map((text, i) => (
+              <div key={i} className="mr-5">
+                {text}
+              </div>
             ))}
           </div>
         </div>
@@ -63,13 +67,17 @@ export default function TechSlider() {
       <div className="py-3 max-h-[25vh]">
         <div className="lg:text-[8vw] text-[16vw] font-bold flex flex-nowrap overflow-hidden">
           <div className="flex flex-nowrap animate-textSlider">
-            {textTechList.map((text) => (
-              <div className="mr-5">{text}</div>
+            {textTechList.map((text, i) => (
+              <div key={i} className="mr-5">
+                {text}
+              </div>
             ))}
           </div>
           <div className="flex flex-nowrap animate-textSlider">
-            {textTechList.map((text) => (
-              <div className="mr-5">{text}</div>
+            {textTechList.map((text, i) => (
+              <div key={i} className="mr-5">
+                {text}
+              </div>
             ))}
           </div>
         </div>

@@ -47,13 +47,17 @@ export default function ColoredTechSlider() {
       <div className="py-3 max-h-[25vh]">
         <div className="lg:text-[8vw] text-[16vw] font-bold flex flex-nowrap flex-row-reverse overflow-hidden">
           <div className="flex flex-nowrap animate-techSlider">
-            {coloredTechList.map((text) => (
-              <div className="mr-5">{text}</div>
+            {coloredTechList.map((text, i) => (
+              <div key={i} className="mr-5">
+                {text}
+              </div>
             ))}
           </div>
           <div className="flex flex-nowrap animate-techSlider">
-            {coloredTechList.map((text) => (
-              <div className="mr-5">{text}</div>
+            {coloredTechList.map((text, i) => (
+              <div key={i} className="mr-5">
+                {text}
+              </div>
             ))}
           </div>
         </div>
@@ -62,13 +66,17 @@ export default function ColoredTechSlider() {
       <div className="py-3 max-h-[25vh]">
         <div className="lg:text-[8vw] text-[16vw] font-bold flex flex-nowrap overflow-hidden">
           <div className="flex flex-nowrap animate-textSlider">
-            {coloredTextTechlist.map((text) => (
-              <div className="mr-5">{text}</div>
+            {coloredTextTechlist.map((text, i) => (
+              <div key={i} className="mr-5">
+                {text}
+              </div>
             ))}
           </div>
           <div className="flex flex-nowrap animate-textSlider">
-            {coloredTextTechlist.map((text) => (
-              <div className="mr-5">{text}</div>
+            {coloredTextTechlist.map((text, i) => (
+              <div key={i} className="mr-5">
+                {text}
+              </div>
             ))}
           </div>
         </div>
