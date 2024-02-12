@@ -12,6 +12,9 @@ module.exports = {
       xs: "376px",
     },
     extend: {
+      backgroundImage: {
+        photo1: "url('/src/Assets/me.jpg')",
+      },
       keyframes: {
         techSlider: {
           "0%": { transform: "translateX(0%)" },

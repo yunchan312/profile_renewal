@@ -1,7 +1,14 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 import Btn from "../Components/Btn";
+import { useRef } from "react";
 
 export default function Test() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "center center"],
+  });
+  const scaleX = useSpring(scrollYProgress);
   return (
     <>
       <div className="bg-orange-500 h-[100vh] flex flex-col justify-center items-center w-full border-2">
@@ -34,20 +41,19 @@ export default function Test() {
           </motion.div>
         }
       </div>
-      <div className="bg-blue-500 h-[100vh] flex flex-col justify-center items-center w-full border-2">
-        {
-          <motion.circle
-            cx={500}
-            animate={{ cx: [null, 100, 200] }}
-            transition={{ duration: 3, times: [0, 0.2, 1] }}
-            className="bg-white w-[30vw] h-[30vh] rounded-sm border-2"
-          ></motion.circle>
-        }
+      <div className="bg-blue-500 h-[90vh] flex flex-col justify-center items-center w-full border-2">
+        <motion.div
+          ref={ref}
+          style={{ scaleX }}
+          className="bg-white w-[30vw] h-[30vw] rounded-sm border-2"
+        />
       </div>
 
-      <div className="bg-yellow-500 h-[100vh] pr-10">
-        <Btn name={"PROFILE"} />
-      </div>
+      {
+        <div className="bg-yellow-500 h-[100vh] pr-10">
+          <Btn name={"PROFILE"} />
+        </div>
+      }
     </>
   );
 }
