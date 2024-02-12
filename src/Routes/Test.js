@@ -1,14 +1,9 @@
 import { motion, useScroll, useSpring } from "framer-motion";
 import Btn from "../Components/Btn";
 import { useRef } from "react";
+import mango from "../Assets/mango.jpg";
 
 export default function Test() {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "center center"],
-  });
-  const scaleX = useSpring(scrollYProgress);
   return (
     <>
       <div className="bg-orange-500 h-[100vh] flex flex-col justify-center items-center w-full border-2">
@@ -49,11 +44,9 @@ export default function Test() {
         />
       </div>
 
-      {
-        <div className="bg-yellow-500 h-[100vh] pr-10">
-          <Btn name={"PROFILE"} />
-        </div>
-      }
+      <div className="bg-yellow-500 h-[100vh] pr-10">
+        <Btn name={"PROFILE"} />
+      </div>
     </>
   );
 }
