@@ -9,12 +9,15 @@ export default function Test() {
     target: ref,
     offset: ["0%", "60%"],
   });
+
   const scale = useSpring(scrollYProgress, {
     scale: 2,
   });
-  const changeScaleX = useSpring(scrollYProgress, {
-    scaleX: 0.2,
+
+  const opacity = useSpring(scrollYProgress, {
+    opacity: 1,
   });
+
   return (
     <>
       <div className="bg-orange-500 h-[100vh] flex flex-col justify-center items-center w-full border-2">
@@ -63,16 +66,15 @@ export default function Test() {
       </div>
       <div className="bg-green-500 h-[100vh] pr-10 flex justify-between items-center relative overflow-hidden">
         <div className="w-[30vw] h-full bg-orange-500 relative z-20 font-bold text-white p-10 text-9xl">
-          MANGO
+          <motion.div style={{ opacity }}>MANGO</motion.div>
         </div>
         <div className="bg-orange-500 w-full h-[100vh] pr-10 flex justify-center items-center overflow-hidden absolute">
           <motion.img
             style={{ scale }}
             src={mango}
-            className="w-[50vw] bg-white border-2 border-red-500 absolute z-10"
+            className="w-[50%] bg-white border-2 border-red-500 absolute z-10"
           ></motion.img>
         </div>
-        <div className="w-[30vw] h-full bg-orange-500 relative z-20"></div>
       </div>
       <div className="bg-slate-500 h-[100vh] pr-10 flex justify-center items-center ">
         <motion.div className="w-[100px] h-[100px] bg-white"></motion.div>
