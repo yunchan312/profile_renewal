@@ -116,7 +116,7 @@ export default function ScrollSize() {
           id="text3"
           className=" w-[50%] px-10 h-[0px] opacity-0  flex flex-col justify-center py-10"
         >
-          <div className="text-5xl font-bold">#TRAVELER</div>
+          <div className="text-5xl font-bold">TRAVELER</div>
           <div className="text-lg">
             여행을 통해 일상에서 벗어나 휴식하는 것 뿐만 아니라
             <br /> 다양한 경험을 쌓고 식견을 넓히는 <strong>'여행가'</strong>
