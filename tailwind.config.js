@@ -13,7 +13,12 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        photo1: "url('/src/Assets/me.jpg')",
+        me: "url('/src/Assets/me.jpg')",
+        photo2: "url('/src/Assets/000.jpg')",
+        night: "url('/src/Assets/night.jpg')",
+        student: "url('/src/Assets/student.jpg')",
+        travel: "url('/src/Assets/travel.jpg')",
+        coding: "url('/src/Assets/coding.jpg')",
       },
       keyframes: {
         techSlider: {

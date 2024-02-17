@@ -79,7 +79,7 @@ export default function Techs() {
                 isClicked === 4 ? `animate-bounce` : null
               } border-slate-400 border-8 w-28 h-28 text-center font-bold rounded-full flex justify-center items-center hover:cursor-pointer hover:shadow-lg bg-white`}
             >
-              ets
+              etc
             </div>
           </div>
 

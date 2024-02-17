@@ -2,6 +2,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import Btn from "../Components/Btn";
 import { useRef } from "react";
 import mango from "../Assets/mango.jpg";
+import ScrollSize from "./Test/scrollx";
 
 export default function Test() {
   const ref = useRef(null);
@@ -76,9 +77,8 @@ export default function Test() {
           ></motion.img>
         </div>
       </div>
-      <div className="bg-slate-500 h-[100vh] pr-10 flex justify-center items-center ">
-        <motion.div className="w-[100px] h-[100px] bg-white"></motion.div>
-      </div>
+
+      <ScrollSize photo="p1" text="text" />
     </>
   );
 }

@@ -1,51 +1,54 @@
-import photo from "../Assets/me.jpg";
-import mango from "../Assets/mango.jpg";
-import { useScroll, motion, useSpring } from "framer-motion";
-import { useRef } from "react";
+import { gsap } from "gsap";
+import { useEffect } from "react";
+import { TextPlugin, MotionPathPlugin, EasePack } from "gsap/all";
 
 export default function MainBar() {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0%", "10%"],
-  });
-  const opacity = useSpring(scrollYProgress, {
-    opacity: 1,
-  });
-  const scale = useSpring(scrollYProgress, {
-    scale: 1.1,
-  });
+  gsap.registerPlugin(TextPlugin);
+  gsap.registerPlugin(MotionPathPlugin);
+  gsap.registerPlugin(EasePack);
+  useEffect(() => {
+    gsap.to("#name", {
+      duration: 0.7,
+      opacity: 1,
+      text: "KOO<br/>YUNCHANN",
+      ease: "none",
+      delay: 1,
+    });
+    gsap.to("#me", {
+      duration: 2,
+      y: -100,
+      opacity: 1,
+    });
+    gsap.to("#extra", {
+      duration: 1,
+      opacity: 1,
+      delay: 2,
+    });
+  }, []);
   return (
-    <div className="bg-slate-400 w-full min-h-[91vh] px-10 sm:mt-20 mt-10 flex flex-col justify-center items-center ">
-      <div className="self-start text-[12vw] w-full text-white font-bold flex md:flex-nowrap flex-wrap">
-        <span>KOO</span>
-        <span>YUNCHANN</span>
-      </div>
-      <div className="text-[3vw] w-full py-3 border-y-8 text-white flex justify-between font-bold">
-        <div>FRONT-END DEVELOPER</div>
-        <div>#CREATIVE #PASSIONATE</div>
-      </div>
-      <div className="text-[9vw] self-end text-white font-bold">
-        IT'S PHENOMENAL
-      </div>
-      <div className="bg-slate-400 h-[100vh] pr-10 flex justify-between items-center relative overflow-hidden w-full">
-        <div className="w-[30vw] h-full bg-slate-400 relative z-20 font-bold text-white p-10 text-9xl  flex flex-col justify-center">
-          <motion.div style={{ opacity }} className="text-[70%]">
-            DEVELOPER,
-          </motion.div>
-          <motion.div style={{ opacity }} className="text-[70%]">
-            HUSTLER,
-          </motion.div>
-          <motion.div style={{ opacity }} className="text-[70%]">
-            TRAVELER
-          </motion.div>
-        </div>
-        <div className=" w-full h-full pr-10 flex justify-center items-center overflow-hidden absolute">
-          <motion.img
-            style={{ scale }}
-            src={photo}
-            className="w-[70%]  absolute z-10"
-          ></motion.img>
+    <div
+      id="bg"
+      className="w-full px-10 flex flex-col justify-center items-center py-20 gap-10"
+    >
+      <div className="flex gap-10 h-full justify-center items-center">
+        <div
+          id="me"
+          className="bg-me w-[1000px] h-[700px] bg-cover opacity-0 relative top-24 shadow-xl"
+        />
+        <div className="h-[500px] flex flex-col justify-center items-center">
+          <div id="name" className="font-bold text-[4vw] opacity-0">
+            312
+            <br />
+            20010312
+          </div>
+          <div id="extra" className="w-full py-3 opacity-0">
+            <div className="text-[2vw]">FRONT-END DEVELOPER</div>
+            <div id="content" className="text-xl">
+              탐구하고, 연구하고, 소통하는
+              <br />
+              개발자를 꿈꾸는 학생입니다.
+            </div>
+          </div>
         </div>
       </div>
     </div>
