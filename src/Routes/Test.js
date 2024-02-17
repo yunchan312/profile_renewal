@@ -4,20 +4,7 @@ import { useRef } from "react";
 import mango from "../Assets/mango.jpg";
 import ScrollSize from "./Test/scrollx";
 import CoverPage from "./Test/coverPage";
-import {
-  SiTypescript,
-  SiReact,
-  SiDocusaurus,
-  SiNextdotjs,
-  SiReactquery,
-  SiRecoil,
-  SiFramer,
-  SiReacthookform,
-  SiStyledcomponents,
-  SiTailwindcss,
-  SiPostman,
-  SiCloudflare,
-} from "react-icons/si";
+
 import IconCard from "./Test/IconCard";
 
 export default function Test() {
@@ -98,13 +85,6 @@ export default function Test() {
 
       <div>
         <CoverPage />
-      </div>
-      <div>
-        <IconCard
-          Icon={<SiReact />}
-          text="어쩌구 저쩌구 가나다라마바사"
-          category="Framework"
-        />
       </div>
     </>
   );
