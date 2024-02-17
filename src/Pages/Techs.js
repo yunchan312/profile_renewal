@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import {
   SiTypescript,
   SiReact,
@@ -13,160 +12,40 @@ import {
   SiPostman,
   SiCloudflare,
 } from "react-icons/si";
-import TechSlider from "../Components/TechSlider";
+import IconCard from "../Routes/Test/IconCard";
+import CoverPage from "../Routes/Test/coverPage";
 import ColoredTechSlider from "../Components/ColoredTechSlider";
-import { motion, useAnimation } from "framer-motion";
 
 export default function Techs() {
-  const controls = useAnimation();
-  const [isClicked, setIsClicked] = useState(1);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const opacityValue = scrollY / 500;
-      controls.start({ opacity: opacityValue });
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [controls]);
-
-  const onClick = (num) => {
-    setIsClicked(num);
-  };
   return (
-    <div className="w-full h-[100vh] overflow-hidden">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={controls}
-        transition={{ duration: 0.5 }}
-        className="flex flex-col justify-center items-center font-bold z-40 w-full backdrop-blur-xl bg-opacity-40 sm:py-10 h-full absolute px-10 md:h-[100vh] origin-[0%] opacity-[var("
+    <div className="w-full overflow-hidden">
+      <ColoredTechSlider />
+      <CoverPage />
+      <ColoredTechSlider />
+      <div
+        id="icons"
+        className="px-10 bg-[#fff200] overflow-hidden flex justify-center items-center"
       >
-        <div className="w-[90%] flex items-center justify-center lg:text-[8vw] text-[14vw] text-slate-400">
-          <span>#TECHNICS</span>
+        <div className="text-2xl">
+          <div>다양한 프레임워크, 라이브러리 등을 사용합니다.</div>
         </div>
-        <div className="flex flex-col w-full items-center gap-2 py-10">
-          <div className="flex justify-center items-center gap-10 h-full w-full flex-wrap">
-            <div
-              onClick={() => onClick(1)}
-              className={`${
-                isClicked === 1 ? `animate-bounce` : null
-              } border-b-slate-400  border-8 w-28 h-28 text-center font-bold rounded-full flex justify-center items-center hover:cursor-pointer hover:shadow-lg bg-white`}
-            >
-              Frameworks
-            </div>
-            <div
-              onClick={() => onClick(2)}
-              className={`${
-                isClicked === 2 ? `animate-bounce` : null
-              } border-b-slate-400 border-l-slate-400 border-8 w-28 h-28 text-center font-bold rounded-full flex justify-center items-center hover:cursor-pointer hover:shadow-lg bg-white`}
-            >
-              libraries
-            </div>
-            <div
-              onClick={() => onClick(3)}
-              className={`${
-                isClicked === 3 ? `animate-bounce` : null
-              } border-b-slate-400 border-l-slate-400 border-t-slate-400 border-8 w-28 h-28 text-center font-bold rounded-full flex justify-center items-center hover:cursor-pointer hover:shadow-lg bg-white`}
-            >
-              styles
-            </div>
-            <div
-              onClick={() => onClick(4)}
-              className={`${
-                isClicked === 4 ? `animate-bounce` : null
-              } border-slate-400 border-8 w-28 h-28 text-center font-bold rounded-full flex justify-center items-center hover:cursor-pointer hover:shadow-lg bg-white`}
-            >
-              etc
-            </div>
-          </div>
-
-          <div className="w-full mb-10">
-            <div
-              className={`${
-                isClicked === 1 ? null : "hidden"
-              } w-full flex flex-col gap-5 justify-center items-center h-full`}
-            >
-              <div className="flex items-center gap-2 border-slate-400 border-2 sm:w-1/2 w-full px-5 py-3 rounded-full shadow-lg bg-white">
-                <SiNextdotjs className="text-4xl" />
-                <div className="sm:text-[2vw]">NEXT</div>
-              </div>
-              <div className="flex items-center gap-2 border-slate-400 border-2 sm:w-1/2 w-full px-5 py-3 rounded-full shadow-lg bg-white">
-                <SiReact className="text-4xl text-blue-400" />
-                <div className="sm:text-[2vw]">React</div>
-              </div>
-              <div className="flex items-center gap-2 border-slate-400 border-2 sm:w-1/2 w-full px-5 py-3 rounded-full shadow-lg bg-white">
-                <SiTypescript className="text-4xl text-blue-600 rounded" />
-                <div className="sm:text-[2vw]">Typescript</div>
-              </div>
-              <div className="flex items-center gap-2 border-slate-400 border-2 sm:w-1/2 w-full px-5 py-3 rounded-full shadow-lg bg-white">
-                <SiDocusaurus className="text-4xl text-green-600" />
-                <div className="sm:text-[2vw]">docusaurus</div>
-              </div>
-            </div>
-
-            <div
-              className={`${
-                isClicked === 2 ? null : "hidden"
-              } w-full h-full flex flex-col gap-5 justify-center items-center`}
-            >
-              <div className="flex items-center gap-2 border-slate-400 border-2 sm:w-1/2 w-full px-5 py-3 rounded-full shadow-lg bg-white">
-                <SiReactquery className="text-4xl" />
-                <div className="sm:text-[2vw]">React Query</div>
-              </div>
-              <div className="flex items-center gap-2 border-slate-400 border-2 sm:w-1/2 w-full px-5 py-3 rounded-full shadow-lg bg-white">
-                <SiRecoil className="text-5xl text-blue-500" />
-                <div className="sm:text-[2vw]">Recoil</div>
-              </div>
-              <div className="flex items-center gap-2 border-slate-400 border-2 sm:w-1/2 w-full px-5 py-3 rounded-full shadow-lg bg-white">
-                <SiFramer className="text-5xl text-black" />
-                <div className="sm:text-[2vw]">Framer-Motion</div>
-              </div>
-              <div className="flex items-center gap-2 border-slate-400 border-2 sm:w-1/2 w-full px-5 py-3 rounded-full shadow-lg bg-white">
-                <SiReacthookform className="text-5xl text-pink-500" />
-                <div className="sm:text-[2vw]">React-Hook-From</div>
-              </div>
-            </div>
-
-            <div
-              className={`${
-                isClicked === 3 ? null : "hidden"
-              } w-full h-full flex flex-col gap-5 justify-center items-center`}
-            >
-              <div className="flex items-center gap-2 border-slate-400 border-2 sm:w-1/2 w-full px-5 py-3 rounded-full shadow-lg bg-white">
-                <SiStyledcomponents className="text-5xl" />
-                <div className="sm:text-[2vw]">Styled-Components</div>
-              </div>
-              <div className="flex items-center gap-2 border-slate-400 border-2 sm:w-1/2 w-full px-5 py-3 rounded-full shadow-lg bg-white">
-                <SiTailwindcss className="text-5xl text-sky-500" />
-                <div className="sm:text-[2vw]">Tailwind</div>
-              </div>
-            </div>
-
-            <div
-              className={`${
-                isClicked === 4 ? null : "hidden"
-              } w-full h-full flex flex-col gap-5 justify-center items-center`}
-            >
-              <div className="flex items-center gap-2 border-slate-400 border-2 sm:w-1/2 w-full px-5 py-3 rounded-full shadow-lg bg-white">
-                <SiPostman className="text-5xl text-orange-500" />
-                <div className="sm:text-[2vw]">Postman</div>
-              </div>
-              <div className="flex items-center gap-2 border-slate-400 border-2 sm:w-1/2 w-full px-5 py-3 rounded-full shadow-lg bg-white">
-                <SiCloudflare className="text-5xl text-orange-500" />
-                <div className="sm:text-[2vw]">Cloudflare</div>
-              </div>
-            </div>
+        <div className="flex w-[70%] overflow-hidden">
+          <div className="flex flex-wrap py-20 justify-end">
+            <IconCard Icon={<SiReact />} text="React" />
+            <IconCard Icon={<SiDocusaurus />} text="Docusaurus" />
+            <IconCard Icon={<SiNextdotjs />} text="Next.js" />
+            <IconCard Icon={<SiReactquery />} text="React-Query" />
+            <IconCard Icon={<SiTypescript />} text="Typescript" />
+            <IconCard Icon={<SiRecoil />} text="Recoil" />
+            <IconCard Icon={<SiFramer />} text="Framer" />
+            <IconCard Icon={<SiReacthookform />} text="Reacthookform" />
+            <IconCard Icon={<SiStyledcomponents />} text="Styledcomponents" />
+            <IconCard Icon={<SiTailwindcss />} text="Tailwindcss" />
+            <IconCard Icon={<SiPostman />} text="Postman" />
+            <IconCard Icon={<SiCloudflare />} text="Cloudflare" />
           </div>
         </div>
-      </motion.div>
-      <TechSlider />
-      <ColoredTechSlider />
-      <TechSlider />
-      <ColoredTechSlider />
-      <TechSlider />
+      </div>
     </div>
   );
 }
