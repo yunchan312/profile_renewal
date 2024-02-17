@@ -15,16 +15,13 @@ export default function Info() {
   const isModal = useRecoilValue(ModalState);
 
   return (
-    <div className="bg-slate-400 py-10 px-10 min-h-[90vh]">
-      {isModal ? <CustomModal /> : null}
-      {
-        <div className=" text-slate-400 font-bold md:text-[7vw] text-[10vw] px-10 flex bg-white justify-between">
-          <div>ABOUT</div>
-          <div>{`>>`}</div>
-        </div>
-      }
-      <TextSlider />
-      <div className="w-full grid lg:grid-cols-2 grid-cols-1 items-center justify-around gap-7 text-slate-400">
+    <div className="bg-gray-400 py-10 px-10 flex flex-col gap-10">
+      <div className="  font-bold md:text-[7vw] text-[10vw] px-10 flex bg-white justify-between">
+        <div>ABOUT</div>
+        <div>{`>>`}</div>
+      </div>
+
+      <div className="w-full grid lg:grid-cols-2 grid-cols-1 items-center justify-around gap-7 ">
         <Link to="https://github.com/yunchan312">
           <Card
             Icon={<IoLogoGithub />}
@@ -51,12 +48,6 @@ export default function Info() {
           title={"EMAIL"}
           content={"phenomenal312@naver.com"}
           detail={"CONTACT_ME"}
-        />
-        <Card
-          Icon={<FaSchool />}
-          title={"UNIVERSITY"}
-          content={"HANKUK UNIVERSITY OF FOREIGN STUDIES"}
-          detail={"HUFS"}
         />
       </div>
     </div>
