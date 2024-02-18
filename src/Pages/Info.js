@@ -9,8 +9,6 @@ import { ModalState } from "../atom";
 import { ClimbingBoxLoader } from "react-spinners";
 
 export default function Info() {
-  const isModal = useRecoilValue(ModalState);
-
   return (
     <div className="bg-gray-400 py-10 px-10 flex flex-col gap-10">
       <div className="  font-bold md:text-[7vw] text-[10vw] px-10 flex bg-white justify-between">

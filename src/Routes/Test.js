@@ -5,8 +5,6 @@ import mango from "../Assets/mango.jpg";
 import ScrollSize from "./Test/scrollx";
 import CoverPage from "./Test/coverPage";
 
-import IconCard from "./Test/IconCard";
-
 export default function Test() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
