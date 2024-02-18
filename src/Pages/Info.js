@@ -4,8 +4,6 @@ import { FaInstagram } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { SiNotion } from "react-icons/si";
 import { Link } from "react-router-dom";
-import { useRecoilValue } from "recoil";
-import { ModalState } from "../atom";
 import { ClimbingBoxLoader } from "react-spinners";
 
 export default function Info() {
