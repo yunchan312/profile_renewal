@@ -19,6 +19,9 @@ module.exports = {
         student: "url('/src/Assets/student.jpg')",
         travel: "url('/src/Assets/travel.jpg')",
         coding: "url('/src/Assets/coding.jpg')",
+        studyFlex: "url('/src/Assets/study-flex.png')",
+        portfolio: "url('/src/Assets/portfolio.png')",
+        quit: "url('/src/Assets/quit.png')",
       },
       keyframes: {
         techSlider: {

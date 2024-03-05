@@ -30,18 +30,18 @@ export default function MainBar() {
       id="bg"
       className="w-full px-10 flex flex-col justify-center items-center py-20 gap-10"
     >
-      <div className="flex gap-10 h-full justify-center items-center">
+      <div className="lg:flex gap-10 h-full justify-center items-center">
         <div
           id="me"
-          className="bg-me w-[1000px] h-[700px] bg-cover opacity-0 relative top-24 shadow-xl"
+          className="bg-me lg:w-[900px] w-[800px] h-[700px] bg-cover opacity-0 relative top-24 shadow-xl"
         />
-        <div className="h-[500px] flex flex-col justify-center items-center">
-          <div id="name" className="font-bold text-[4vw] opacity-0">
+        <div className="h-[500px] flex lg:flex-col justify-center items-center">
+          <div id="name" className="font-bold text-[4vw] opacity-0 w-[70%]">
             312
             <br />
             20010312
           </div>
-          <div id="extra" className="w-full py-3 opacity-0">
+          <div id="extra" className="w-[70%] py-3 opacity-0">
             <div className="text-[2vw]">FRONT-END DEVELOPER</div>
             <div id="content" className="text-xl">
               탐구하고, 연구하고, 소통하는
