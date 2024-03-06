@@ -9,7 +9,7 @@ export default function Projects() {
         />
         <Btn
           title={"PROFILE"}
-          content="저의 포트폴리오를 웹사이트입니다. 제 자신에 대한 간략한 소개와
+          content="저의 포트폴리오 웹사이트입니다. 제 자신에 대한 간략한 소개와
 기술 스택, 프로젝트 등 제가 공부하면서 배운 것들과 경험들을 넣어둔 웹사이트입니다."
         />
       </div>
