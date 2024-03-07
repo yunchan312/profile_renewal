@@ -1,6 +1,6 @@
 import Home from "./Routes/Home";
 import { Route, Routes } from "react-router-dom";
-import ProflioDetail from "./Pages/ProfileDetail";
+import ProflioDetail from "./Pages/proflieDetails/ProfileDetail";
 
 function App() {
   return (
