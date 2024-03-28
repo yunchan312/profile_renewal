@@ -11,26 +11,26 @@ import { ScrollTrigger } from "gsap/all";
 
 export default function ProflioDetail() {
   gsap.registerPlugin(ScrollTrigger);
-  gsap.defaults({ ease: "none", duration: 2 });
-  const tl = gsap.timeline();
+  let sections = gsap.utils.toArray(".panel");
   useEffect(() => {
-    tl.from("#green", { xPercent: -100 }).from("#blue", { xPercent: 100 });
-    ScrollTrigger.create({
-      animation: tl,
-      trigger: "#container",
-      start: "top top",
-      end: "+=4000",
-      scrub: true,
-      pin: true,
-      anticipatePin: 1,
+    gsap.to(sections, {
+      xPercent: -100 * (sections.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".container",
+        pin: true,
+        scrub: 1,
+        snap: 1 / (sections.length - 1),
+        end: () => "+=" + window.innerWidth,
+      },
     });
   }, []);
 
   return (
-    <>
+    <div className="w-[300%] flex">
       <div
-        id="white container"
-        className="my-10 flex flex-col justify-center px-24 h-[90vh] absolute z-10"
+        id="white"
+        className="panel my-10 flex flex-col justify-center px-24 w-[100%] h-[90vh] z-10"
       >
         <div className="text-5xl font-bold">PROFILE</div>
         <div className="flex justify-start items-center gap-10 p-5 ">
@@ -60,8 +60,8 @@ export default function ProflioDetail() {
       </div>
 
       <div
-        id="green container"
-        className="my-10 flex flex-col justify-center px-24 h-[90vh] bg-green-400 absolute z-20"
+        id="green"
+        className="panel my-10 flex flex-col justify-center px-24 w-[100%] h-[90vh] bg-green-400 z-20"
       >
         <div className="text-5xl font-bold">PROFILE</div>
         <div className="flex justify-start items-center gap-10 p-5 ">
@@ -92,7 +92,7 @@ export default function ProflioDetail() {
 
       <div
         id="blue container"
-        className="my-10 flex flex-col justify-center px-24 h-[90vh] bg-blue-400 absolute z-30"
+        className="panel my-10 flex flex-col justify-center px-24 w-[100%] h-[90vh] bg-blue-400  z-30"
       >
         <div className="text-5xl font-bold">PROFILE</div>
         <div className="flex justify-start items-center gap-10 p-5 ">
@@ -120,6 +120,6 @@ export default function ProflioDetail() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
