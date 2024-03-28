@@ -24,8 +24,7 @@ export default function ProflioDetail() {
         end: () => "+=" + window.innerWidth,
       },
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [sections]);
 
   return (
     <div className="w-[300%] flex">
